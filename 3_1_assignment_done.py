@@ -26,8 +26,10 @@ print(debug)
 #Task 3
 print('Task 3')
 a1 = (1, 2, 3, 4, 5)
-
-b1 = (5, 4, 3, 2, 1)
+le = []
+for i in range(len(a1)):
+    le.append(a1[i])
+b1 = tuple(le[::-1])
 
 print(b1)  # should print (5, 4, 3, 2, 1)
 
