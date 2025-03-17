@@ -1,10 +1,13 @@
 #Task 1
 class Interval:
-    def __init__(self, start : int | float, end : int | float):
+    def __init__(self, start: int | float, end: int | float):
+        if not isinstance(start, (int, float)) or not isinstance(end, (int, float)):
+            raise TypeError("Start and end must be numeric (int or float)")
         if start > end:
             raise ValueError("Start must be smaller than end")
         self.start = start
         self.end = end
+
 
     def __str__(self):
         return f'{self.start}, {self.end}'
@@ -14,6 +17,8 @@ print(interval) # [1, 5]
 #Task 2
 class Interval:
     def __init__(self, start: int | float, end: int | float):
+        if not isinstance(start, (int, float)) or not isinstance(end, (int, float)):
+            raise TypeError("Start and end must be numeric (int or float)")
         if start > end:
             raise ValueError("Start must be smaller than end")
         self.start = start
@@ -37,6 +42,8 @@ print("Do intervals overlap?", overlap_result) # Do intervals overlap? True
 #Task 3
 class Interval:
     def __init__(self, start: int | float, end: int | float):
+        if not isinstance(start, (int, float)) or not isinstance(end, (int, float)):
+            raise TypeError("Start and end must be numeric (int or float)")
         if start > end:
             raise ValueError("Start must be smaller than end")
         self.start = start
@@ -69,6 +76,8 @@ print("Intersection result (static method):", intersection_result_static) # Inte
 #Task 4
 class Interval:
     def __init__(self, start: int | float, end: int | float):
+        if not isinstance(start, (int, float)) or not isinstance(end, (int, float)):
+            raise TypeError("Start and end must be numeric (int or float)")
         if start > end:
             raise ValueError("Start must be smaller than end")
         self.start = start
@@ -105,6 +114,8 @@ print("Intersection result:", intersection_result) # Intersection result: [3, 5]
 #Task 5
 class Interval:
     def __init__(self, start: int | float, end: int | float):
+        if not isinstance(start, (int, float)) or not isinstance(end, (int, float)):
+            raise TypeError("Start and end must be numeric (int or float)")
         if start > end:
             raise ValueError("Start must be smaller than end")
         self.start = start
@@ -150,6 +161,8 @@ print("Union Result (Static method):", union_result_static) # Union Result (Stat
 #Task 6
 class Interval:
     def __init__(self, start: int | float, end: int | float):
+        if not isinstance(start, (int, float)) or not isinstance(end, (int, float)):
+            raise TypeError("Start and end must be numeric (int or float)")
         if start > end:
             raise ValueError("Start must be smaller than end")
         self.start = start
@@ -201,6 +214,8 @@ print("Union Result:", union_result) # Union Result: [1, 8]
 #Task 7
 class Interval:
     def __init__(self, start: int | float, end: int | float):
+        if not isinstance(start, (int, float)) or not isinstance(end, (int, float)):
+            raise TypeError("Start and end must be numeric (int or float)")
         if start > end:
             raise ValueError("Start must be smaller than end")
         self.start = start
